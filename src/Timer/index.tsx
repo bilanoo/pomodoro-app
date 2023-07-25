@@ -49,8 +49,14 @@ export const Timer = ({
         <CircularProgress
           variant="determinate"
           value={normalizedProgress}
-          sx={{ color: "#f87070" }}
-          size="20rem"
+          sx={{
+            color: "#f87070",
+            backgroundColor: "#161932",
+            borderRadius: "50%",
+            padding: "5px",
+          }}
+          size="19rem"
+          thickness={1}
         />
         <Box
           sx={{
@@ -59,6 +65,7 @@ export const Timer = ({
             bottom: 0,
             right: 0,
             position: "absolute",
+
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
