@@ -6,7 +6,7 @@ export const BreakSelector = () => {
       <button
         className="break-type-button"
         id="pomodoro-button"
-        style={{ paddingLeft: "40px" }}
+        style={{ marginLeft: "40px" }}
       >
         pomodoro
       </button>
@@ -16,7 +16,7 @@ export const BreakSelector = () => {
       <button
         className="break-type-button"
         id="long-break-button"
-        style={{ paddingRight: "40px" }}
+        style={{ marginRight: "40px" }}
       >
         long break
       </button>
