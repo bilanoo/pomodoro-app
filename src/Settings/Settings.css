@@ -1,0 +1,9 @@
+.settings-icon {
+  position: relative;
+}
+
+.settings-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
