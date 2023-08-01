@@ -29,7 +29,6 @@ export const Timer = ({
     return () => clearInterval(timer);
   }, [remainingTime, startAndPause]);
 
-  console.log(displayTime);
   // Calculate the progress as a percentage
   const progress = ((displayTime - remainingTime) / displayTime) * 100;
 

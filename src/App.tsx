@@ -3,31 +3,36 @@ import "./App.css";
 import { BreakSelector } from "./BreakSelector";
 import { Settings } from "./Settings";
 import { Timer } from "./Timer";
+import { SettingsModal } from "./Settings/SettingsModal";
 
 function App() {
   const [displayTimer, setTimer] = useState<number>(0.5 * 60);
 
   const [remainingTime, setRemainingTime] = useState<number>(displayTimer);
   const [buttonSelected, setButtonSelected] = useState<string>("pomodoro");
+  const [pomodoroTimer, setPomodoroTimer] = useState(25);
+  const [shortBreak, setShortBreak] = useState(5);
+  const [longBreak, setLongBreak] = useState(15);
+  const [openModal, setOpenModal] = useState(false);
 
   function handleClick(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void {
     if (event.currentTarget.value === "pomodoro") {
-      setTimer(25 * 60);
-      setRemainingTime(25 * 60);
+      setTimer(pomodoroTimer * 60);
+      setRemainingTime(pomodoroTimer * 60);
       setButtonSelected("pomodoro");
     }
 
     if (event.currentTarget.value === "short-break") {
-      setTimer(5 * 60);
-      setRemainingTime(5 * 60);
+      setTimer(shortBreak * 60);
+      setRemainingTime(shortBreak * 60);
       setButtonSelected("short-break");
     }
 
     if (event.currentTarget.value === "long-break") {
-      setTimer(15 * 60);
-      setRemainingTime(15 * 60);
+      setTimer(longBreak * 60);
+      setRemainingTime(longBreak * 60);
       setButtonSelected("long-break");
     }
   }
@@ -46,13 +51,24 @@ function App() {
             alignItems: "center",
           }}
         >
+          {openModal && (
+            <SettingsModal
+              setPomodoroTimer={setPomodoroTimer}
+              setShortBreak={setShortBreak}
+              setLongBreak={setLongBreak}
+              pomodoroTimer={pomodoroTimer}
+              shortBreak={shortBreak}
+              longBreak={longBreak}
+              setOpenModal={setOpenModal}
+            />
+          )}
           <Timer
             displayTime={displayTimer}
             setTime={setTimer}
             remainingTime={remainingTime}
             setRemainingTime={setRemainingTime}
           />
-          <Settings />
+          <Settings setOpenModal={setOpenModal} />
         </div>
       </div>
     </>

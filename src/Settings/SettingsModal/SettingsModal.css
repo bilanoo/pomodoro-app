@@ -1,0 +1,33 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.timer-settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.change-timer-type-text {
+  margin: 0;
+  align-self: center;
+}
+
+.change-timer-length {
+  display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
+  justify-content: space-between;
+}
