@@ -23,11 +23,11 @@
 }
 
 .active {
-  background-color: #f87070;
+  background-color: var(--selectedColor);
   box-shadow: 0 1px 5px 0 white, 0 1px 5px 0 white;
 }
 
 .break-type-button:focus {
-  background-color: #f87070;
+  background-color: var(--selectedColor);
   box-shadow: 0 1px 5px 0 white, 0 1px 5px 0 white;
 }

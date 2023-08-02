@@ -1,0 +1,29 @@
+.font-selection {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eff1fa;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.font-selector-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.font-selector-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background-color: #161932;
+  color: white;
+}

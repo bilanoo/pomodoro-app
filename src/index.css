@@ -1,5 +1,5 @@
 :root {
-  font-family: "Kumbh Sans", sans-serif;
+  --main-font-family: Kumbh Sans, sans-serif;
   line-height: 1.5;
 
   color-scheme: light dark;
@@ -11,6 +11,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --selectedColor: #f87070;
 }
 
 html,
@@ -18,4 +20,5 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  font-family: var(--main-font-family);
 }

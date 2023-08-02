@@ -6,7 +6,7 @@ export const StyledModal = styled(Modal)({
     fontFamily: "Roboto Slab, serif",
     color: "black",
     width: "22rem",
-    height: "45rem",
+    height: "37rem",
     position: "absolute",
     top: "50%",
     left: "50%",

@@ -1,0 +1,22 @@
+.color-selection {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eff1fa;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.orange-select {
+  background-color: #f87070;
+}
+
+.cyan-select {
+    background-color: #70f3f8;
+  }
+
+  .purple-select {
+    background-color: #d881f8;
+  }

@@ -49,7 +49,7 @@ export const Timer = ({
           variant="determinate"
           value={normalizedProgress}
           sx={{
-            color: "#f87070",
+            color: "var(--selectedColor)",
             backgroundColor: "#161932",
             borderRadius: "50%",
             padding: "5px",

@@ -10,6 +10,8 @@ function App() {
 
   const [remainingTime, setRemainingTime] = useState<number>(displayTimer);
   const [buttonSelected, setButtonSelected] = useState<string>("pomodoro");
+  const [fontSelected, setFontSelected] = useState<string>("kumbh-sans");
+  const [colorSelected, setColorSelected] = useState<string>("orange");
   const [pomodoroTimer, setPomodoroTimer] = useState(25);
   const [shortBreak, setShortBreak] = useState(5);
   const [longBreak, setLongBreak] = useState(15);
@@ -53,6 +55,8 @@ function App() {
         >
           {openModal && (
             <SettingsModal
+              fontSelector={fontSelected}
+              setFontSelected={setFontSelected}
               setPomodoroTimer={setPomodoroTimer}
               setShortBreak={setShortBreak}
               setLongBreak={setLongBreak}
@@ -60,6 +64,8 @@ function App() {
               shortBreak={shortBreak}
               longBreak={longBreak}
               setOpenModal={setOpenModal}
+              colorSelected={colorSelected}
+              setColorSelected={setColorSelected}
             />
           )}
           <Timer
