@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import "./Timer.css";
 import { Box, CircularProgress } from "@mui/material";
+import ReplayIcon from "@mui/icons-material/Replay";
 
 interface TimerProps {
   displayTime: number;
-  setTime: React.Dispatch<React.SetStateAction<number>>;
   setRemainingTime: React.Dispatch<React.SetStateAction<number>>;
   remainingTime: number;
 }
 
 export const Timer = ({
   displayTime,
-  setTime,
   remainingTime,
   setRemainingTime,
 }: TimerProps) => {
@@ -41,8 +40,14 @@ export const Timer = ({
     return `${formattedMinutes}:${formattedSeconds}`;
   };
 
+  console.log(remainingTime);
   function CircularProgressWithLabel() {
     const normalizedProgress = Math.min(Math.max(progress, 0), 100);
+
+    function resetClick(): void {
+      setRemainingTime(displayTime);
+    }
+
     return (
       <Box sx={{ position: "relative", display: "inline-flex" }}>
         <CircularProgress
@@ -80,6 +85,13 @@ export const Timer = ({
           >
             {startAndPause ? "PAUSE" : "START"}
           </button>
+
+          {remainingTime === 0 && (
+            <ReplayIcon
+              onClick={resetClick}
+              sx={{ cursor: "pointer", marginTop: "20px" }}
+            />
+          )}
         </Box>
       </Box>
     );

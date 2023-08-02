@@ -6,7 +6,7 @@ import { Timer } from "./Timer";
 import { SettingsModal } from "./Settings/SettingsModal";
 
 function App() {
-  const [displayTimer, setTimer] = useState<number>(0.5 * 60);
+  const [displayTimer, setTimer] = useState<number>(25 * 60);
 
   const [remainingTime, setRemainingTime] = useState<number>(displayTimer);
   const [buttonSelected, setButtonSelected] = useState<string>("pomodoro");
@@ -70,7 +70,6 @@ function App() {
           )}
           <Timer
             displayTime={displayTimer}
-            setTime={setTimer}
             remainingTime={remainingTime}
             setRemainingTime={setRemainingTime}
           />

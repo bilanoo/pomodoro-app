@@ -3,7 +3,6 @@ import CloseIcon from "@mui/icons-material/Close";
 
 export const StyledModal = styled(Modal)({
   "&": {
-    fontFamily: "Roboto Slab, serif",
     color: "black",
     width: "22rem",
     height: "37rem",
@@ -13,6 +12,10 @@ export const StyledModal = styled(Modal)({
     transform: "translate(-50%, -50%)",
     alignSelf: "center",
     justifySelf: "center",
+  },
+  "@media only screen and (min-width: 992px)": {
+    width: "40rem",
+    height: "30rem",
   },
 });
 

@@ -137,27 +137,29 @@ export const SettingsModal = ({
 
         <div className="timer-settings-container">
           <TimeText className="time-text">TIME (MINUTES)</TimeText>
-          <GenericInputBox
-            setSpecificTimer={setPomodoroTimer}
-            typeText="pomodoro"
-            value={pomodoroTimer}
-            idValue="pomodoro"
-            handleChange={handleChange}
-          />
-          <GenericInputBox
-            setSpecificTimer={setShortBreak}
-            typeText="short break"
-            value={shortBreak}
-            idValue="short-break"
-            handleChange={handleChange}
-          />
-          <GenericInputBox
-            setSpecificTimer={setLongBreak}
-            typeText="long break"
-            value={longBreak}
-            idValue="long-break"
-            handleChange={handleChange}
-          />
+          <div className="input-settings-container">
+            <GenericInputBox
+              setSpecificTimer={setPomodoroTimer}
+              typeText="pomodoro"
+              value={pomodoroTimer}
+              idValue="pomodoro"
+              handleChange={handleChange}
+            />
+            <GenericInputBox
+              setSpecificTimer={setShortBreak}
+              typeText="short break"
+              value={shortBreak}
+              idValue="short-break"
+              handleChange={handleChange}
+            />
+            <GenericInputBox
+              setSpecificTimer={setLongBreak}
+              typeText="long break"
+              value={longBreak}
+              idValue="long-break"
+              handleChange={handleChange}
+            />
+          </div>
         </div>
         <Divider
           sx={{ marginTop: "20px", marginRight: "20px", marginLeft: "20px" }}

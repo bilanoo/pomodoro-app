@@ -30,13 +30,17 @@ export const GenericInputBox = ({
 
   return (
     <div className="change-timer-length">
-      <p className="change-timer-type-text" style={{ color: "#B5B4BA" }}>
+      <p
+        className="change-timer-type-text"
+        style={{ color: "#B5B4BA", marginTop: "auto", marginBottom: "auto" }}
+      >
         {typeText}
       </p>
 
       <StyledInputTextfield
         type="number"
         value={value}
+        sx={{ marginBottom: "20px", marginLeft: "auto" }}
         onChange={handleChange}
         id={idValue}
         InputProps={{
